@@ -1,0 +1,972 @@
+/* ==================================================
+   HERO DA PÁGINA
+================================================== */
+
+.tabela-hero {
+  padding:
+    72px max(24px,
+      calc((100% - 1100px) / 2));
+
+  background: var(--azul-claro);
+}
+
+
+.tabela-hero-conteudo {
+  max-width: 760px;
+}
+
+
+.tabela-hero h1 {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: var(--azul);
+
+  font-family: var(--titulo);
+
+  font-size: clamp(54px,
+      8vw,
+      86px);
+
+  line-height: .9;
+}
+
+
+.tabela-hero-conteudo>p:last-child {
+  max-width: 560px;
+
+  margin: 24px 0 0;
+
+  color: var(--suave);
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* ==================================================
+   CLASSIFICAÇÃO
+================================================== */
+
+.classificacao {
+  width: min(1100px,
+      calc(100% - 48px));
+
+  margin: 64px auto 96px;
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+.classificacao-topo {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 28px;
+}
+
+
+.classificacao-topo h2 {
+  margin: 0;
+
+  color: var(--azul);
+
+  font-family: var(--titulo);
+
+  font-size: clamp(38px,
+      5vw,
+      58px);
+
+  line-height: .9;
+}
+
+
+.classificacao-descricao {
+  max-width: 520px;
+
+  margin: 14px 0 0;
+
+  color: var(--suave);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* ==================================================
+   ESTATÍSTICAS
+================================================== */
+
+.estatisticas-tabela {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  margin-bottom: 26px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+
+  background: var(--branco);
+}
+
+
+.estatistica {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  padding: 22px 24px;
+
+  border-right:
+    1px solid var(--borda);
+}
+
+
+.estatistica:last-child {
+  border-right: 0;
+}
+
+
+.estatistica span {
+  color: var(--suave);
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+
+.estatistica strong {
+  color: var(--azul);
+
+  font-family: var(--titulo);
+
+  font-size: 36px;
+
+  line-height: 1;
+}
+
+
+/* ==================================================
+   LEGENDA
+================================================== */
+
+.legenda-classificacao {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 22px;
+
+  margin-bottom: 20px;
+
+  color: var(--suave);
+
+  font-size: 12px;
+}
+
+
+.legenda-classificacao>div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.marcador {
+  display: block;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+}
+
+
+.marcador-classificacao {
+  background: var(--verde);
+}
+
+
+.marcador-normal {
+  background: var(--borda);
+}
+
+
+/* ==================================================
+   CONTAINER DOS GRUPOS
+================================================== */
+
+#grupos-container {
+  display: grid;
+
+  gap: 28px;
+}
+
+
+/* ==================================================
+   CARD DO GRUPO
+================================================== */
+
+.grupo-card {
+  overflow: hidden;
+
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+
+  background: var(--branco);
+}
+
+
+.grupo-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 24px;
+
+  border-bottom:
+    1px solid var(--borda);
+
+  background: #f9faf8;
+}
+
+
+.grupo-header h2 {
+  margin: 0;
+
+  color: var(--azul);
+
+  font-family: var(--titulo);
+
+  font-size: 32px;
+
+  line-height: 1;
+}
+
+
+.badge-count {
+  padding: 7px 11px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(166, 217, 56, .18);
+
+  color: var(--verde-escuro);
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   TABELA
+================================================== */
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+
+.table-grupo {
+  width: 100%;
+
+  min-width: 680px;
+
+  border-collapse: collapse;
+}
+
+
+/* CABEÇALHO */
+
+.table-grupo thead {
+  background: var(--azul);
+}
+
+
+.table-grupo th {
+  padding: 14px 15px;
+
+  color: #dce5ec;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  letter-spacing: .04em;
+
+  text-transform: uppercase;
+}
+
+
+.table-grupo th:nth-child(2) {
+  text-align: left;
+}
+
+
+/* CORPO */
+
+.table-grupo td {
+  height: 62px;
+
+  padding: 10px 15px;
+
+  border-bottom:
+    1px solid var(--borda);
+
+  color: var(--texto);
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+
+.table-grupo tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+
+.table-grupo tbody tr {
+  transition:
+    background .15s ease;
+}
+
+
+.table-grupo tbody tr:hover {
+  background: #f7f9fa;
+}
+
+
+/* ==================================================
+   POSIÇÃO
+================================================== */
+
+.posicao {
+  width: 55px;
+
+  color: var(--suave);
+
+  font-weight: 700;
+}
+
+
+/* PRIMEIROS COLOCADOS */
+
+.table-grupo tbody tr:nth-child(1) .posicao,
+.table-grupo tbody tr:nth-child(2) .posicao {
+
+  color: var(--verde-escuro);
+}
+
+
+/* MARCADOR LATERAL */
+
+.table-grupo tbody tr:nth-child(1),
+.table-grupo tbody tr:nth-child(2) {
+  border-left:
+    4px solid var(--verde);
+}
+
+
+/* ==================================================
+   INFORMAÇÕES DA EQUIPE
+================================================== */
+
+.time-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+.time-nome {
+  color: var(--azul);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+.time-torneio {
+  color: var(--suave);
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+
+/* ==================================================
+   PONTOS
+================================================== */
+
+.ponto-highlight {
+  color: var(--azul) !important;
+
+  font-weight: 700 !important;
+}
+
+
+thead .ponto-highlight {
+  color: var(--verde) !important;
+}
+
+
+/* ==================================================
+   CARREGAMENTO
+================================================== */
+
+.loading-state {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  min-height: 220px;
+
+  padding: 40px;
+
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+
+  background: var(--branco);
+
+  color: var(--suave);
+
+  font-size: 14px;
+
+  text-align: center;
+}
+
+
+.loading-state p {
+  margin: 0;
+}
+
+
+.loading-circulo {
+  width: 34px;
+  height: 34px;
+
+  border:
+    3px solid var(--borda);
+
+  border-top-color:
+    var(--verde);
+
+  border-radius: 50%;
+
+  animation:
+    girar .8s linear infinite;
+}
+
+
+@keyframes girar {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* ==================================================
+   SIGLAS
+================================================== */
+
+.siglas-tabela {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+  margin-top: 20px;
+
+  padding-top: 18px;
+
+  border-top:
+    1px solid var(--borda);
+
+  color: var(--suave);
+
+  font-size: 11px;
+}
+
+
+.siglas-tabela span {
+  display: flex;
+
+  gap: 5px;
+}
+
+
+.siglas-tabela strong {
+  color: var(--azul);
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+@media (max-width: 760px) {
+
+  .tabela-hero {
+    padding:
+      54px 24px 48px;
+  }
+
+
+  .tabela-hero h1 {
+    font-size:
+      clamp(48px,
+        14vw,
+        70px);
+  }
+
+
+  .classificacao {
+    width:
+      calc(100% - 32px);
+
+    margin:
+      48px auto 64px;
+  }
+
+
+  .classificacao-topo {
+    display: block;
+  }
+
+
+  .classificacao-topo .botao {
+    width: 100%;
+
+    margin-top: 22px;
+  }
+
+
+  .estatisticas-tabela {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+
+  .estatistica {
+    padding: 18px;
+  }
+
+
+  .estatistica:nth-child(2) {
+    border-right: 0;
+  }
+
+
+  .estatistica:nth-child(3) {
+    grid-column: 1 / -1;
+
+    border-top:
+      1px solid var(--borda);
+
+    border-right: 0;
+  }
+
+
+  .estatistica strong {
+    font-size: 30px;
+  }
+
+
+  .grupo-header {
+    padding: 18px;
+  }
+
+
+  .grupo-header h2 {
+    font-size: 28px;
+  }
+
+
+  .siglas-tabela {
+    gap: 12px 18px;
+  }
+
+}
+
+
+/* ==================================================
+   TELAS MUITO PEQUENAS
+================================================== */
+
+@media (max-width: 420px) {
+
+  .estatisticas-tabela {
+    grid-template-columns: 1fr;
+  }
+
+
+  .estatistica,
+  .estatistica:nth-child(2),
+  .estatistica:nth-child(3) {
+    grid-column: auto;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid var(--borda);
+  }
+
+
+  .estatistica:last-child {
+    border-bottom: 0;
+  }
+
+
+  .grupo-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+}
+
+
+/* ==================================================
+   ACESSIBILIDADE
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .loading-circulo {
+    animation: none;
+  }
+
+}
+
+/* ==================================================
+   FILTRO DE TORNEIO
+================================================== */
+
+.filtro-torneio-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  width: 100%;
+
+  margin: 0 0 28px;
+
+  padding: 20px 22px;
+
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+
+  background: var(--branco);
+}
+
+
+.filtro-torneio-texto {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.filtro-torneio-texto span {
+  color: var(--verde-escuro);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+}
+
+
+.filtro-torneio-texto strong {
+  color: var(--azul);
+
+  font-family: var(--titulo);
+
+  font-size: 24px;
+
+  line-height: 1;
+}
+
+
+/* SELECT */
+
+#filtro-torneio {
+  width: 320px;
+  min-height: 46px;
+
+  padding: 0 42px 0 14px;
+
+  border: 1px solid var(--borda);
+  border-radius: 5px;
+
+  background: var(--branco);
+
+  color: var(--texto);
+
+  font-family: var(--texto-fonte);
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+
+#filtro-torneio:hover {
+  border-color: var(--verde-escuro);
+}
+
+
+#filtro-torneio:focus {
+  border-color: var(--verde);
+
+  outline: none;
+
+  box-shadow:
+    0 0 0 3px rgba(166, 217, 56, .20);
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 760px) {
+
+  .filtro-torneio-area {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 16px;
+
+    padding: 18px;
+  }
+
+
+  #filtro-torneio {
+    width: 100%;
+  }
+
+}
+
+/* ==================================================
+   CONTROLE DO SLIDER
+================================================== */
+
+.slider-controles {
+  display: none;
+}
+
+@media (max-width: 760px) {
+
+  .slider-controles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 10px 14px;
+
+    border-bottom: 1px solid var(--borda);
+
+    background: var(--azul-claro);
+  }
+
+
+  .slider-controles>span {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: var(--suave);
+
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+
+  .slider-controles>span::before {
+    content: '↔';
+
+    color: var(--verde-escuro);
+
+    font-size: 16px;
+  }
+
+
+  .slider-botoes {
+    display: flex;
+
+    gap: 8px;
+  }
+
+
+  .slider-btn {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    padding: 0;
+
+    border: 1px solid var(--borda);
+    border-radius: 50%;
+
+    background: var(--branco);
+
+    color: var(--azul);
+
+    font-family: var(--texto-fonte);
+
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+      background .2s ease,
+      border-color .2s ease,
+      transform .2s ease;
+  }
+
+
+  .slider-btn:hover,
+  .slider-btn:focus-visible {
+    border-color: var(--verde);
+
+    background: var(--verde);
+
+    color: var(--azul);
+  }
+
+
+  .slider-btn:active {
+    transform: scale(.94);
+  }
+
+}
+
+/* Blocos de torneio usados na versão estática */
+.torneio-bloco { margin-bottom:32px; }
+.torneio-cabecalho { margin:0 0 14px; color:var(--azul); font-family:var(--titulo); font-size:30px; line-height:1; }
+
+/* ==================================================
+   CORREÇÃO MOBILE — ROLAGEM SOMENTE DA TABELA
+   O .torneio-bloco é filho direto de um CSS Grid.
+   Sem min-width: 0, a tabela pode aumentar a largura
+   do grid e fazer a página inteira deslizar.
+================================================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.classificacao,
+#grupos-container,
+.torneio-bloco,
+.grupo-card,
+.table-responsive {
+  min-width: 0;
+  max-width: 100%;
+}
+
+#grupos-container {
+  width: 100%;
+}
+
+.torneio-bloco,
+.grupo-card {
+  width: 100%;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-inline: contain;
+}
+
+.table-grupo {
+  min-width: 680px;
+}
+
+@media (max-width: 760px) {
+  .classificacao {
+    min-width: 0;
+    max-width: calc(100% - 32px);
+  }
+
+  #grupos-container,
+  .torneio-bloco,
+  .grupo-card {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .table-responsive {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    touch-action: pan-x;
+  }
+
+  .table-grupo {
+    width: 680px;
+    min-width: 680px;
+    max-width: none;
+  }
+}

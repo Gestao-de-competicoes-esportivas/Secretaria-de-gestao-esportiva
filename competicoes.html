@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Veja as competições esportivas do SGCE em Extremoz.">
-  <link rel="stylesheet" href="competicoes.css">
+  <link rel="stylesheet" href="static/competicoes.css">
   <title>SGCE | Competições</title>
 </head>
+
 <body>
   <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="cabecalho">
-    <a class="marca" href="index.html" aria-label="SGCE, página inicial">
-      <img src="imagens/logo sgce sem bg do cgpt.png" alt="Logo SGCE">
+    <a class="marca" href="index.html">
+      <img src="static/imagens/logo-sgce.png" alt="Logo SGCE">
     </a>
 
     <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
@@ -20,12 +22,27 @@
     </button>
 
     <nav class="navegacao" id="menu-principal" aria-label="Navegação principal">
-      <a href="index.html">Início</a>
-      <a href="competicoes.html" aria-current="page">Competições</a>
-      <a href="index.html#noticias">Notícias</a>
+      <a href="index.html" aria-current="page">
+        Início
+      </a>
+
+      <a href="competicoes.html">
+        Competições
+      </a>
+
+      <a href="index.html#noticias">
+        Notícias
+      </a>
+
+      <a href="tabela.html">
+        Tabelas
+      </a>
     </nav>
 
-    <a class="botao botao-verde" href="index.html#inscricoes">Participar</a>
+    <a class="botao botao-verde" href="cadastro.html">
+      Participar
+    </a>
+
   </header>
 
   <main id="conteudo" tabindex="-1">
@@ -43,32 +60,44 @@
 
       <div class="cards">
         <article class="card">
-          <img src="imagens/copa menino do grude.jpeg" alt="Copa Menino do Grude" loading="lazy" decoding="async">
+          <img src="static/imagens/copa-menino-do-grude.jpeg">
           <div class="card-conteudo">
             <p class="tag">Categorias de base</p>
             <h3>Copa Menino do Grude</h3>
             <p>U9 · U11 · U13 · U15 · U17 · U20</p>
-            <a href="index.html#inscricoes">Tenho interesse <span aria-hidden="true">→</span></a>
+            <!-- Copa Menino do Grude -->
+            <a href="tabela.html?torneio_id=1">
+              Tenho interesse
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
         </article>
 
         <article class="card">
-          <img src="imagens/copa esperança.jpeg" alt="Copa Esperança Futsal Base" loading="lazy" decoding="async">
+          <img src="static/imagens/copa-esperanca.jpeg">
           <div class="card-conteudo">
             <p class="tag">Futsal de base</p>
             <h3>Copa Esperança</h3>
             <p>U11 · U13 · U15 · U17</p>
-            <a href="index.html#inscricoes">Tenho interesse <span aria-hidden="true">→</span></a>
+            <!-- Copa Esperança -->
+            <a href="tabela.html?torneio_id=2">
+              Tenho interesse
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
         </article>
 
         <article class="card">
-          <img src="imagens/municipal serie B campo.jpeg" alt="Campeonato Municipal de Extremoz Série B" loading="lazy" decoding="async">
+          <img src="static/imagens/municipal-serie-b-campo.jpeg">
           <div class="card-conteudo">
             <p class="tag">Futebol adulto</p>
             <h3>Municipal de Extremoz</h3>
             <p>Série B · Adulto</p>
-            <a href="index.html#inscricoes">Tenho interesse <span aria-hidden="true">→</span></a>
+            <!-- Municipal de Extremoz -->
+            <a href="tabela.html?torneio_id=3">
+              Tenho interesse
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
         </article>
       </div>
@@ -80,32 +109,7 @@
     <span>Gestão de competições esportivas · Extremoz, RN</span>
   </footer>
 
-  <script>
-    const botaoMenu = document.querySelector('.menu-mobile');
-    const menu = document.querySelector('.navegacao');
-
-    function fecharMenu() {
-      menu.classList.remove('navegacao-aberta');
-      botaoMenu.setAttribute('aria-expanded', 'false');
-      botaoMenu.setAttribute('aria-label', 'Abrir menu');
-    }
-
-    botaoMenu.addEventListener('click', () => {
-      const aberto = menu.classList.toggle('navegacao-aberta');
-      botaoMenu.setAttribute('aria-expanded', String(aberto));
-      botaoMenu.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
-    });
-
-    menu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', fecharMenu);
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && menu.classList.contains('navegacao-aberta')) {
-        fecharMenu();
-        botaoMenu.focus();
-      }
-    });
-  </script>
+  <script src="static/site.js"></script>
 </body>
+
 </html>

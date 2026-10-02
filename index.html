@@ -1,146 +1,323 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="Competições, notícias e inscrições esportivas em Extremoz.">
-  <link rel="stylesheet" href="inicio.css">
+
+  <!-- CSS carregado pela pasta static -->
+  <link rel="stylesheet" href="static/inicio.css">
+
   <title>SGCE | Competições esportivas</title>
 </head>
+
 <body>
-  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ACESSIBILIDADE -->
+  <a class="pular-conteudo" href="#conteudo">
+    Pular para o conteúdo
+  </a>
+
+
+  <!-- ==================================================
+       CABEÇALHO
+  ================================================== -->
 
   <header class="cabecalho">
+
+    <!-- LOGO -->
     <a class="marca" href="index.html" aria-label="SGCE, página inicial">
-      <img src="imagens/logo sgce sem bg do cgpt.png" alt="Logo SGCE">
+      <img src="static/imagens/logo-sgce.png" alt="Logo SGCE">
     </a>
 
-    <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+
+    <!-- MENU MOBILE -->
+    <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false"
+      aria-controls="menu-principal">
       <span class="icone-menu"></span>
     </button>
 
+
+    <!-- NAVEGAÇÃO -->
     <nav class="navegacao" id="menu-principal" aria-label="Navegação principal">
-      <a href="index.html" aria-current="page">Início</a>
-      <a href="competicoes.html">Competições</a>
-      <a href="#noticias">Notícias</a>
+      <a href="index.html" aria-current="page">
+        Início
+      </a>
+
+      <a href="competicoes.html">
+        Competições
+      </a>
+
+      <a href="index.html#noticias">
+        Notícias
+      </a>
+
+      <a href="tabela.html">
+        Tabelas
+      </a>
     </nav>
 
-    <a class="botao botao-verde" href="#inscricoes">Participar</a>
+
+    <!-- CADASTRO -->
+    <a class="botao botao-verde" href="cadastro.html">
+      Participar
+    </a>
+
   </header>
 
+
+  <!-- ==================================================
+       CONTEÚDO PRINCIPAL
+  ================================================== -->
+
   <main id="conteudo" tabindex="-1">
+
+
+    <!-- ==================================================
+         ABERTURA
+    ================================================== -->
+
     <section class="abertura" aria-labelledby="titulo-principal">
+
       <div class="abertura-texto">
-        <p class="rotulo">Extremoz, RN</p>
-        <h1 id="titulo-principal">Competições que acontecem perto de você.</h1>
-        <p>Veja os campeonatos, acompanhe as notícias e encontre uma forma de participar.</p>
-        <a class="botao botao-verde" href="competicoes.html">Ver competições</a>
+
+        <p class="rotulo">
+          Extremoz, RN
+        </p>
+
+        <h1 id="titulo-principal">
+          Competições que acontecem perto de você.
+        </h1>
+
+        <p>
+          Veja os campeonatos, acompanhe as notícias
+          e encontre uma forma de participar.
+        </p>
+
+        <a class="botao botao-verde" href="competicoes.html">
+          Ver competições
+        </a>
+
       </div>
 
-      <figure class="abertura-foto">
-        <img src="imagens/municipal serie B campo.jpeg" alt="Campo do Campeonato Municipal de Extremoz">
-        <figcaption>Municipal de Extremoz · Série B</figcaption>
-      </figure>
+
     </section>
+
+
+    <!-- ==================================================
+         RESUMO DA TEMPORADA
+    ================================================== -->
 
     <section class="resumo" aria-label="Resumo da temporada">
+
       <div>
         <strong>03</strong>
-        <span>competições cadastradas</span>
+
+        <span>
+          competições cadastradas
+        </span>
       </div>
+
+
       <div>
         <strong>06</strong>
-        <span>categorias de base</span>
+
+        <span>
+          categorias de base
+        </span>
       </div>
+
+
       <div>
         <strong>2026</strong>
-        <span>temporada atual</span>
+
+        <span>
+          temporada atual
+        </span>
       </div>
+
     </section>
+
+
+    <!-- ==================================================
+         NOTÍCIAS
+    ================================================== -->
 
     <section class="secao" id="noticias" aria-labelledby="titulo-noticias">
+
       <div class="secao-titulo">
+
         <div>
-          <p class="rotulo">Notícias</p>
-          <h2 id="titulo-noticias">O que está acontecendo</h2>
+
+          <p class="rotulo">
+            Notícias
+          </p>
+
+          <h2 id="titulo-noticias">
+            Nossa várzea, nosso orgulho.
+          </h2>
+
         </div>
-        <p class="secao-ajuda">Resultados, campeonatos e oportunidades para as equipes da cidade.</p>
+
+
+        <p class="secao-ajuda">
+          Resultados, campeonatos e oportunidades
+          para as equipes da cidade.
+        </p>
+
       </div>
+
 
       <div class="noticias">
+
+
+        <!-- NOTÍCIA 1 -->
+
         <article class="noticia noticia-destaque">
-          <img src="imagens/gasac.jpeg" alt="Escudo da equipe GASAC" loading="lazy" decoding="async">
+
+          <img src="static/imagens/gasac.jpeg" alt="Escudo da equipe GASAC" loading="lazy"
+            decoding="async">
+
           <div>
-            <p class="tag">Resultado</p>
-            <h3>GASAC campeão Sub 17</h3>
-            <p>O time venceu a Copa Esperança e levou o título para casa.</p>
+
+            <p class="tag">
+              Resultado
+            </p>
+
+            <h3>
+              GASAC campeão Sub 17
+            </h3>
+
+            <p>
+              O time venceu a Copa Esperança
+              e levou o título para casa.
+            </p>
+
           </div>
+
         </article>
+
+
+        <!-- NOTÍCIA 2 -->
 
         <article class="noticia">
-          <img src="imagens/copa esperança.jpeg" alt="Arte da Copa Esperança Futsal Base" loading="lazy" decoding="async">
+
+          <img src="static/imagens/copa-esperanca.jpeg"
+            alt="Arte da Copa Esperança Futsal Base" loading="lazy" decoding="async">
+
           <div>
-            <p class="tag">Base</p>
-            <h3>Copa Esperança</h3>
-            <p>Confira as categorias que participam da competição.</p>
+
+            <p class="tag">
+              Base
+            </p>
+
+            <h3>
+              Copa Esperança
+            </h3>
+
+            <p>
+              Confira as categorias que participam
+              da competição.
+            </p>
+
           </div>
+
         </article>
+
+
+        <!-- NOTÍCIA 3 -->
 
         <article class="noticia">
-          <img src="imagens/municipal serie B campo.jpeg" alt="Arte do Campeonato Municipal Série B" loading="lazy" decoding="async">
+
+          <img src="static/imagens/municipal-serie-b-campo.jpeg"
+            alt="Arte do Campeonato Municipal Série B" loading="lazy" decoding="async">
+
           <div>
-            <p class="tag">Inscrições</p>
-            <h3>Série B aberta</h3>
-            <p>Prepare sua equipe para participar do campeonato municipal.</p>
+
+            <p class="tag">
+              Inscrições
+            </p>
+
+            <h3>
+              Série B aberta
+            </h3>
+
+            <p>
+              Prepare sua equipe para participar
+              do campeonato municipal.
+            </p>
+
           </div>
+
         </article>
+
       </div>
+
     </section>
 
-    <section class="participar" id="inscricoes" aria-labelledby="titulo-participar">
-      <div>
-        <p class="rotulo">Quer participar?</p>
-        <h2 id="titulo-participar">Escolha uma opção e fale com a organização.</h2>
+
+    <!-- ==================================================
+         CHAMADA PARA CADASTRO
+    ================================================== -->
+
+    <section class="chamada-cadastro" aria-labelledby="titulo-cadastro">
+
+      <div class="chamada-cadastro-texto">
+
+        <p class="rotulo">
+          Primeiro acesso
+        </p>
+
+        <h2 id="titulo-cadastro">
+          Ainda não possui cadastro?
+        </h2>
+
+        <p>
+          Cadastre o técnico responsável,
+          sua equipe e seus jogadores para participar
+          das competições disponíveis no SGCE.
+        </p>
+
       </div>
-      <nav class="lista-acoes" aria-label="Opções de participação">
-        <a href="#inscricoes"><span>01</span> Cadastrar atleta</a>
-        <a href="#inscricoes"><span>02</span> Criar torneio</a>
-        <a href="#inscricoes"><span>03</span> Criar copa</a>
-      </nav>
+
+
+      <div class="chamada-cadastro-acao">
+
+        <a class="botao botao-verde" href="cadastro.html">
+          Criar cadastro
+
+          <span aria-hidden="true">
+            →
+          </span>
+        </a>
+
+      </div>
+
     </section>
+
   </main>
 
+
+  <!-- ==================================================
+       RODAPÉ
+  ================================================== -->
+
   <footer class="rodape">
-    <strong>SGCE</strong>
-    <span>Gestão de competições esportivas · Extremoz, RN</span>
+
+    <strong>
+      SGCE
+    </strong>
+
+    <span>
+      Gestão de competições esportivas · Extremoz, RN
+    </span>
+
   </footer>
 
-  <script>
-    const botaoMenu = document.querySelector('.menu-mobile');
-    const menu = document.querySelector('.navegacao');
+  <script src="static/site.js"></script>
 
-    function fecharMenu() {
-      menu.classList.remove('navegacao-aberta');
-      botaoMenu.setAttribute('aria-expanded', 'false');
-      botaoMenu.setAttribute('aria-label', 'Abrir menu');
-    }
-
-    botaoMenu.addEventListener('click', () => {
-      const aberto = menu.classList.toggle('navegacao-aberta');
-      botaoMenu.setAttribute('aria-expanded', String(aberto));
-      botaoMenu.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
-    });
-
-    menu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', fecharMenu);
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && menu.classList.contains('navegacao-aberta')) {
-        fecharMenu();
-        botaoMenu.focus();
-      }
-    });
-  </script>
 </body>
+
 </html>

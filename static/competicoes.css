@@ -147,8 +147,13 @@ main:focus {
   left: 0;
 }
 
-.icone-menu::before { top: -7px; }
-.icone-menu::after { top: 7px; }
+.icone-menu::before {
+  top: -7px;
+}
+
+.icone-menu::after {
+  top: 7px;
+}
 
 .botao {
   display: inline-flex;
@@ -196,7 +201,7 @@ main:focus {
   text-transform: uppercase;
 }
 
-.cabecalho-pagina > p:last-child {
+.cabecalho-pagina>p:last-child {
   max-width: 440px;
   margin: 22px 0 0;
   color: var(--suave);
@@ -225,7 +230,7 @@ main:focus {
   line-height: .9;
 }
 
-.lista-cabecalho > span {
+.lista-cabecalho>span {
   color: var(--suave);
   font-size: 13px;
 }
@@ -262,7 +267,7 @@ main:focus {
   line-height: .92;
 }
 
-.card-conteudo > p:not(.tag) {
+.card-conteudo>p:not(.tag) {
   margin: 0;
   color: var(--suave);
   font-size: 13px;
@@ -320,7 +325,7 @@ main:focus {
     margin-left: auto;
   }
 
-  .cabecalho > .botao {
+  .cabecalho>.botao {
     order: 3;
     min-width: 82px;
     padding: 0 12px;
@@ -357,7 +362,7 @@ main:focus {
     display: block;
   }
 
-  .lista-cabecalho > span {
+  .lista-cabecalho>span {
     display: block;
     margin-top: 12px;
   }
@@ -381,3 +386,35 @@ main:focus {
     scroll-behavior: auto;
   }
 }
+
+
+/* ==================================================
+   HOVER DA LOGO
+================================================== */
+
+.marca {
+  cursor: pointer;
+}
+
+.marca img {
+  transition:
+    transform .2s ease,
+    filter .2s ease;
+}
+
+.marca:hover img {
+  transform: scale(1.07);
+  filter: brightness(1.12);
+}
+
+.marca:active img {
+  transform: scale(1.02);
+}
+
+
+
+/* Hover da logo */
+.marca { cursor:pointer; }
+.marca img { transition:transform .2s ease,filter .2s ease; }
+.marca:hover img { transform:scale(1.07); filter:brightness(1.12); }
+.marca:active img { transform:scale(1.02); }

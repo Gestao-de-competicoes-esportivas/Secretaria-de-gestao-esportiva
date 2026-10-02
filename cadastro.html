@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Cadastro de técnicos e equipes no SGCE.">
+
+  <link rel="stylesheet" href="static/inicio.css">
+
+  <link rel="stylesheet" href="static/cadastro.css">
+
+  <title>SGCE | Cadastro</title>
+</head>
+
+<body>
+
+  <a class="pular-conteudo" href="#conteudo">
+    Pular para o conteúdo
+  </a>
+
+  <!-- CABEÇALHO -->
+
+  <header class="cabecalho">
+
+    <a class="marca" href="index.html">
+      <img src="static/imagens/logo-sgce.png" alt="Logo SGCE">
+    </a>
+
+    <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+      <span class="icone-menu"></span>
+    </button>
+
+    <nav class="navegacao" id="menu-principal" aria-label="Navegação principal">
+      <a href="index.html" aria-current="page">
+        Início
+      </a>
+
+      <a href="competicoes.html">
+        Competições
+      </a>
+
+      <a href="index.html#noticias">
+        Notícias
+      </a>
+
+      <a href="tabela.html">
+        Tabelas
+      </a>
+    </nav>
+
+    </nav>
+
+    <a class="botao botao-verde" href="cadastro.html" aria-current="page">
+      Participar
+    </a>
+
+  </header>
+
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="cadastro-hero">
+
+      <div class="cadastro-hero-conteudo">
+
+        <p class="rotulo">
+          Inscrições
+        </p>
+
+        <h1>
+          Cadastre sua equipe.
+        </h1>
+
+        <p class="cadastro-descricao">
+          Informe os dados do técnico responsável e da equipe
+          para iniciar sua participação nas competições.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- FORMULÁRIO -->
+
+    <section class="cadastro-area" aria-labelledby="titulo-formulario">
+
+      <div class="cadastro-cabecalho">
+
+        <div>
+
+          <p class="rotulo">
+            Novo cadastro
+          </p>
+
+          <h2 id="titulo-formulario">
+            Técnico e equipe
+          </h2>
+
+        </div>
+
+        <p>
+          Os campos marcados com
+          <strong>*</strong>
+          são obrigatórios.
+        </p>
+
+      </div>
+
+
+      <form class="formulario-cadastro" id="form-cadastro">
+
+        <div id="mensagem-form" class="mensagem-form" aria-live="polite"></div>
+
+        <!-- DADOS DO TÉCNICO -->
+
+        <fieldset>
+
+          <legend>
+
+            <span>01</span>
+
+            Dados do técnico
+
+          </legend>
+
+          <p class="descricao-grupo">
+            Informe quem será o responsável pela equipe.
+          </p>
+
+
+          <div class="grade-form">
+
+            <div class="campo campo-grande">
+
+              <label for="nome">
+                Nome completo *
+              </label>
+
+              <input type="text" id="nome" name="nome" placeholder="Ex.: João da Silva" autocomplete="name" required>
+
+            </div>
+
+
+            <div class="campo">
+
+              <label for="email">
+                E-mail *
+              </label>
+
+              <input type="email" id="email" name="email" placeholder="exemplo@email.com" autocomplete="email" required>
+
+            </div>
+
+
+            <div class="campo">
+
+              <label for="telefone">
+                Telefone
+              </label>
+
+              <input type="tel" id="telefone" name="telefone" placeholder="(84) 99999-9999" autocomplete="tel">
+
+            </div>
+
+          </div>
+
+        </fieldset>
+
+
+        <!-- DADOS DA EQUIPE -->
+
+        <fieldset>
+
+          <legend>
+
+            <span>02</span>
+
+            Dados da equipe
+
+          </legend>
+
+          <p class="descricao-grupo">
+            Agora informe os dados da equipe que será cadastrada.
+          </p>
+
+
+          <div class="grade-form">
+
+            <div class="campo campo-grande">
+
+              <label for="nome_equipe">
+                Nome da equipe *
+              </label>
+
+              <input type="text" id="nome_equipe" name="nome_equipe" placeholder="Ex.: União Extremoz FC" required>
+
+            </div>
+
+
+            <div class="campo">
+
+              <label for="categoria">
+                Categoria *
+              </label>
+
+              <select id="categoria" name="categoria" required>
+
+                <option value="">
+                  Selecione uma categoria
+                </option>
+
+                <option value="U9">
+                  U9
+                </option>
+
+                <option value="U11">
+                  U11
+                </option>
+
+                <option value="U13">
+                  U13
+                </option>
+
+                <option value="U15">
+                  U15
+                </option>
+
+                <option value="U17">
+                  U17
+                </option>
+
+                <option value="U20">
+                  U20
+                </option>
+
+                <option value="Adulto">
+                  Adulto
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+        </fieldset>
+
+        <!-- ==================================================
+     COMPETIÇÃO
+================================================== -->
+
+        <fieldset>
+
+          <legend>
+            <span>03</span>
+            Competição
+          </legend>
+
+          <p class="descricao-grupo">
+            Escolha em qual torneio esta equipe será inscrita.
+          </p>
+
+
+          <div class="grade-form">
+
+            <div class="campo campo-grande">
+
+              <label for="torneio">
+                Torneio *
+              </label>
+
+              <select id="torneio" name="torneio_id" required>
+
+                <option value="">
+                  Selecione uma competição
+                </option>
+</select>
+
+            </div>
+
+
+            <div class="campo">
+
+              <label for="grupo">
+                Grupo
+              </label>
+
+              <select id="grupo" name="grupo">
+
+                <option value="">
+                  Definir automaticamente
+                </option>
+
+                <option value="Grupo A">
+                  Grupo A
+                </option>
+
+                <option value="Grupo B">
+                  Grupo B
+                </option>
+
+                <option value="Grupo C">
+                  Grupo C
+                </option>
+
+                <option value="Grupo D">
+                  Grupo D
+                </option>
+
+                <option value="Grupo E">
+                  Grupo E
+                </option>
+
+                <option value="Grupo F">
+                  Grupo F
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+        </fieldset>
+
+        <!-- DADOS DOS JOGADORES -->
+
+        <fieldset>
+
+          <legend>
+            <span>04</span>
+            Jogadores da equipe
+          </legend>
+
+          <p class="descricao-grupo">
+            Adicione os atletas que farão parte da equipe.
+          </p>
+
+
+          <div id="lista-jogadores">
+
+            <!-- JOGADOR 1 -->
+
+            <div class="jogador">
+
+              <div class="jogador-cabecalho">
+
+                <h3>
+                  Jogador 1
+                </h3>
+
+              </div>
+
+
+              <div class="grade-form">
+
+                <div class="campo campo-grande">
+
+                  <label>
+                    Nome completo *
+                  </label>
+
+                  <input type="text" name="jogador_nome[]" placeholder="Ex.: Pedro Henrique" required>
+
+                </div>
+
+
+                <div class="campo">
+
+                  <label>
+                    Data de nascimento
+                  </label>
+
+                  <input type="date" name="jogador_nascimento[]">
+
+                </div>
+
+
+                <div class="campo">
+
+                  <label>
+                    Documento
+                  </label>
+
+                  <input type="text" name="jogador_documento[]" placeholder="CPF ou documento">
+
+                </div>
+
+
+                <div class="campo">
+
+                  <label>
+                    Telefone
+                  </label>
+
+                  <input type="tel" name="jogador_telefone[]" placeholder="(84) 99999-9999">
+
+                </div>
+
+
+                <div class="campo">
+
+                  <label>
+                    Número da camisa
+                  </label>
+
+                  <input type="number" name="jogador_numero[]" min="0" max="99" placeholder="10">
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <button type="button" class="botao-adicionar" id="adicionar-jogador">
+            + Adicionar outro jogador
+          </button>
+
+        </fieldset>
+
+        <!-- ENVIO -->
+
+        <div class="formulario-final">
+
+          <p>
+            Confira os dados antes de finalizar o cadastro.
+          </p>
+
+          <button class="botao botao-verde botao-cadastrar" type="submit">
+            Cadastrar equipe
+            <span aria-hidden="true">→</span>
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <!-- RODAPÉ -->
+
+  <footer class="rodape">
+
+    <strong>
+      SGCE
+    </strong>
+
+    <span>
+      Gestão de competições esportivas · Extremoz, RN
+    </span>
+
+  </footer>
+
+
+  <!-- MENU MOBILE -->
+
+  <script src="static/supabase.js"></script>
+  <script src="static/site.js"></script>
+  <script src="static/cadastro.js"></script>
+
+</body>
+
+</html>

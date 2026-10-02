@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin SGCE | Login</title>
+  <link rel="stylesheet" href="../static/admin.css">
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-card">
+      <div class="login-brand">
+        <div class="login-brand-badge">SG</div>
+        <div>
+          <h1>Painel SGCE</h1>
+          <p>Acesso reservado aos administradores.</p>
+        </div>
+      </div>
+
+      <form id="form-login">
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="campo">
+          <label for="senha">Senha</label>
+          <input id="senha" type="password" autocomplete="current-password" required>
+        </div>
+        <button class="btn btn-verde btn-block" id="btn-login" type="submit">Entrar</button>
+      </form>
+
+      <div class="mensagem" id="mensagem" aria-live="polite"></div>
+      <a class="login-voltar" href="../index.html">← Voltar para o site</a>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../static/admin-login.js"></script>
+</body>
+</html>

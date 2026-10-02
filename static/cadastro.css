@@ -1,0 +1,503 @@
+.cadastro-hero {
+  padding: 68px max(
+    24px,
+    calc((100% - 1100px) / 2)
+  );
+
+  background: var(--azul-claro);
+}
+
+
+.cadastro-hero-conteudo {
+  max-width: 700px;
+}
+
+
+.cadastro-hero h1 {
+  margin: 0;
+
+  color: var(--azul);
+
+  font-family: var(--titulo);
+
+  font-size: clamp(
+    54px,
+    8vw,
+    88px
+  );
+
+  line-height: .88;
+}
+
+
+.cadastro-descricao {
+  max-width: 520px;
+
+  margin: 22px 0 0;
+
+  color: var(--suave);
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* ÁREA PRINCIPAL */
+
+.cadastro-area {
+  width: min(
+    1100px,
+    calc(100% - 48px)
+  );
+
+  margin: 64px auto 96px;
+}
+
+
+.cadastro-cabecalho {
+  display: flex;
+
+  align-items: end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 28px;
+}
+
+
+.cadastro-cabecalho h2 {
+  margin: 0;
+
+  color: var(--azul);
+
+  font-family: var(--titulo);
+
+  font-size: clamp(
+    38px,
+    5vw,
+    58px
+  );
+
+  line-height: .9;
+}
+
+
+.cadastro-cabecalho > p {
+  max-width: 290px;
+
+  margin: 0;
+
+  color: var(--suave);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+.cadastro-cabecalho strong {
+  color: var(--verde-escuro);
+}
+
+
+/* FORMULÁRIO */
+
+.formulario-cadastro {
+  overflow: hidden;
+
+  background: var(--branco);
+
+  border: 1px solid var(--borda);
+
+  border-radius: 8px;
+}
+
+
+.formulario-cadastro fieldset {
+  margin: 0;
+
+  padding: 32px;
+
+  border: 0;
+
+  border-bottom: 1px solid var(--borda);
+}
+
+
+.formulario-cadastro legend {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0;
+
+  color: var(--azul);
+
+  font-family: var(--titulo);
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+
+.formulario-cadastro legend span {
+  color: var(--verde-escuro);
+
+  font-size: 18px;
+}
+
+
+.descricao-grupo {
+  margin: 8px 0 26px;
+
+  color: var(--suave);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* GRID */
+
+.grade-form {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 22px;
+}
+
+
+.campo {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.campo-grande {
+  grid-column: 1 / -1;
+}
+
+
+/* LABELS */
+
+.campo label {
+  color: var(--azul);
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* INPUTS */
+
+.campo input,
+.campo select {
+  width: 100%;
+
+  min-height: 50px;
+
+  padding: 0 14px;
+
+  border: 1px solid var(--borda);
+
+  border-radius: 5px;
+
+  background: var(--branco);
+
+  color: var(--texto);
+
+  font-family: var(--texto-fonte);
+
+  font-size: 14px;
+
+  transition:
+    border-color .2s,
+    box-shadow .2s;
+}
+
+
+.campo input::placeholder {
+  color: #94a3b8;
+}
+
+
+.campo input:hover,
+.campo select:hover {
+  border-color: #aab7c2;
+}
+
+
+.campo input:focus,
+.campo select:focus {
+  border-color: var(--verde-escuro);
+
+  outline: none;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(166, 217, 56, .2);
+}
+
+
+/* FINAL */
+
+.formulario-final {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 26px 32px;
+
+  background: #f3f6f7;
+}
+
+
+.formulario-final p {
+  margin: 0;
+
+  color: var(--suave);
+
+  font-size: 13px;
+}
+
+
+.botao-cadastrar {
+  gap: 14px;
+
+  border: 0;
+
+  cursor: pointer;
+
+  font-family: var(--texto-fonte);
+}
+
+
+.botao-cadastrar span {
+  font-size: 18px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+  .cadastro-hero {
+    padding: 54px 24px 48px;
+  }
+
+
+  .cadastro-area {
+    width: calc(100% - 32px);
+
+    margin:
+      48px auto
+      64px;
+  }
+
+
+  .cadastro-cabecalho {
+    display: block;
+  }
+
+
+  .cadastro-cabecalho > p {
+    margin-top: 14px;
+  }
+
+
+  .formulario-cadastro fieldset {
+    padding: 26px 20px;
+  }
+
+
+  .grade-form {
+    grid-template-columns: 1fr;
+  }
+
+
+  .campo-grande {
+    grid-column: auto;
+  }
+
+
+  .formulario-final {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 24px 20px;
+  }
+
+
+  .botao-cadastrar {
+    width: 100%;
+  }
+
+}
+
+/* ==================================================
+   JOGADORES
+================================================== */
+
+.jogador {
+  padding: 24px 0;
+
+  border-bottom: 1px solid var(--borda);
+}
+
+.jogador:first-child {
+  padding-top: 0;
+}
+
+.jogador:last-child {
+  border-bottom: 0;
+}
+
+
+.jogador-cabecalho {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+
+.jogador-cabecalho h3 {
+  margin: 0;
+
+  color: var(--azul);
+
+  font-family: var(--titulo);
+
+  font-size: 25px;
+}
+
+
+.botao-adicionar {
+  margin-top: 24px;
+
+  min-height: 44px;
+
+  padding: 0 18px;
+
+  border: 1px solid var(--azul);
+  border-radius: 5px;
+
+  background: transparent;
+
+  color: var(--azul);
+
+  font-family: var(--texto-fonte);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.botao-adicionar:hover {
+  background: var(--azul);
+
+  color: var(--branco);
+}
+
+
+.remover-jogador {
+  padding: 8px 12px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+
+  background: transparent;
+
+  color: var(--suave);
+
+  font-family: var(--texto-fonte);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.remover-jogador:hover {
+  border-color: #b42318;
+
+  color: #b42318;
+}
+
+/* Mensagens do cadastro estático */
+.mensagem-form { display:none; margin:22px 32px 0; padding:13px 15px; border-radius:5px; font-size:13px; font-weight:700; }
+.mensagem-form.mostrar { display:block; }
+.mensagem-form.sucesso { background:#eff9e9; color:#2f6d14; border:1px solid #c6e7b7; }
+.mensagem-form.erro { background:#fff0f0; color:#a61b1b; border:1px solid #efc0c0; }
+@media (max-width:760px) { .mensagem-form { margin:18px 20px 0; } }
+
+
+/* ==================================================
+   AJUSTES VISUAIS — ORIENTAÇÃO 02/10/2026
+   Cadastro: espaçamentos iguais em todas as etapas
+================================================== */
+
+.formulario-cadastro fieldset {
+  padding: 28px 32px 32px;
+}
+
+/* Faz o legend participar do fluxo normal para não criar
+   espaços diferentes entre o título e a descrição. */
+.formulario-cadastro legend {
+  float: left;
+  width: 100%;
+  margin: 0 0 12px;
+}
+
+.descricao-grupo {
+  clear: both;
+  margin: 0 0 22px;
+}
+
+.grade-form {
+  column-gap: 22px;
+  row-gap: 20px;
+}
+
+.formulario-final {
+  padding: 26px 32px;
+}
+
+@media (max-width: 760px) {
+  .formulario-cadastro fieldset {
+    padding: 24px 20px 28px;
+  }
+
+  .formulario-cadastro legend {
+    margin-bottom: 10px;
+  }
+
+  .descricao-grupo {
+    margin-bottom: 20px;
+  }
+}

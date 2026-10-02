@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Tabelas e classificação das competições esportivas do SGCE.">
+
+  <!-- CSS principal do site -->
+  <link rel="stylesheet" href="static/inicio.css">
+
+  <!-- CSS específico da tabela -->
+  <link rel="stylesheet" href="static/tabela.css">
+
+  <title>SGCE | Tabelas</title>
+</head>
+
+<body>
+
+  <!-- ACESSIBILIDADE -->
+  <a class="pular-conteudo" href="#conteudo">
+    Pular para o conteúdo
+  </a>
+
+
+  <!-- ==================================================
+       CABEÇALHO
+  ================================================== -->
+
+  <header class="cabecalho">
+
+    <a class="marca" href="index.html" aria-label="SGCE, página inicial">
+      <img src="static/imagens/logo-sgce.png" alt="Logo SGCE">
+    </a>
+
+
+    <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false"
+      aria-controls="menu-principal">
+      <span class="icone-menu"></span>
+    </button>
+
+
+    <nav class="navegacao" id="menu-principal" aria-label="Navegação principal">
+
+      <a href="index.html">
+        Início
+      </a>
+
+      <a href="competicoes.html">
+        Competições
+      </a>
+
+      <a href="index.html#noticias">
+        Notícias
+      </a>
+
+      <a href="tabela.html">
+        Tabelas
+      </a>
+
+    </nav>
+
+
+    <a class="botao botao-verde" href="cadastro.html">
+      Participar
+    </a>
+
+  </header>
+
+
+  <!-- ==================================================
+       CONTEÚDO
+  ================================================== -->
+
+  <main id="conteudo" tabindex="-1">
+
+
+    <!-- HERO -->
+
+    <section class="tabela-hero">
+
+      <div class="tabela-hero-conteudo">
+
+        <p class="rotulo">
+          Temporada 2026
+        </p>
+
+        <h1>
+          Tabelas e classificação
+        </h1>
+
+        <p>
+          Acompanhe os grupos, pontuações e desempenho
+          das equipes participantes das competições.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         ÁREA PRINCIPAL DA CLASSIFICAÇÃO
+    ================================================== -->
+
+    <section class="classificacao" aria-labelledby="titulo-classificacao">
+
+
+      <!-- CABEÇALHO -->
+
+      <div class="classificacao-topo">
+
+        <div>
+
+          <p class="rotulo">
+            Classificação geral
+          </p>
+
+          <h2 id="titulo-classificacao">
+            Equipes
+          </h2>
+
+          <p class="classificacao-descricao">
+            Os times são organizados automaticamente
+            de acordo com seus respectivos grupos.
+          </p>
+
+        </div>
+
+
+        <a class="botao botao-verde" href="cadastro.html">
+          Inscrever equipe
+        </a>
+
+      </div>
+
+
+      <div class="filtro-torneio-area">
+        <div class="filtro-torneio-texto">
+          <span>Competição</span>
+          <strong>Escolha o torneio</strong>
+        </div>
+        <select id="filtro-torneio" aria-label="Selecionar torneio">
+          <option value="">Todos os torneios</option>
+        </select>
+      </div>
+
+      <!-- ==================================================
+           ESTATÍSTICAS
+      ================================================== -->
+
+      <div class="estatisticas-tabela">
+
+        <article class="estatistica">
+
+          <span>
+            Equipes inscritas
+          </span>
+
+          <strong id="stat-total-times">
+            0
+          </strong>
+
+        </article>
+
+
+        <article class="estatistica">
+
+          <span>
+            Grupos
+          </span>
+
+          <strong id="stat-total-grupos">
+            0
+          </strong>
+
+        </article>
+
+
+        <article class="estatistica">
+
+          <span>
+            Temporada
+          </span>
+
+          <strong>
+            2026
+          </strong>
+
+        </article>
+
+      </div>
+
+
+      <!-- ==================================================
+           LEGENDA
+      ================================================== -->
+
+      <div class="legenda-classificacao">
+
+        <div>
+
+          <span class="marcador marcador-classificacao"></span>
+
+          <span>
+            Zona de classificação
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <span class="marcador marcador-normal"></span>
+
+          <span>
+            Demais posições
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- ==================================================
+           GRUPOS GERADOS PELO JAVASCRIPT
+      ================================================== -->
+
+      <div id="grupos-container">
+
+        <div class="loading-state">
+
+          <div class="loading-circulo"></div>
+
+          <p>
+            Carregando classificação...
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- ==================================================
+           LEGENDA DAS SIGLAS
+      ================================================== -->
+
+      <div class="siglas-tabela">
+
+        <span>
+          <strong>P</strong>
+          Pontos
+        </span>
+
+        <span>
+          <strong>J</strong>
+          Jogos
+        </span>
+
+        <span>
+          <strong>V</strong>
+          Vitórias
+        </span>
+
+        <span>
+          <strong>E</strong>
+          Empates
+        </span>
+
+        <span>
+          <strong>D</strong>
+          Derrotas
+        </span>
+
+        <span>
+          <strong>SG</strong>
+          Saldo de gols
+        </span>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==================================================
+       RODAPÉ
+  ================================================== -->
+
+  <footer class="rodape">
+
+    <strong>
+      SGCE
+    </strong>
+
+    <span>
+      Gestão de competições esportivas · Extremoz, RN
+    </span>
+
+  </footer>
+
+
+  <script src="static/supabase.js"></script>
+  <script src="static/site.js"></script>
+  <script src="static/tabela.js"></script>
+
+</body>
+
+</html>

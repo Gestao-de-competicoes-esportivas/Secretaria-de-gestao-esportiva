@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin SGCE | Painel</title>
+  <link rel="stylesheet" href="../static/admin.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" id="sidebar">
+      <div><h1>SGCE Admin</h1><small>Gestão de competições</small></div>
+      <nav>
+        <button class="ativo" data-secao="dashboard">Visão geral</button>
+        <button data-secao="competicoes">Competições</button>
+        <button data-secao="inscricoes">Inscrições</button>
+        <button data-secao="equipes">Equipes</button>
+        <button data-secao="classificacao">Classificação</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <a class="btn btn-outline" href="../index.html">Abrir site</a>
+        <button class="btn btn-verde" id="btn-sair">Sair</button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="mobile-top">
+        <strong>SGCE Admin</strong>
+        <button class="mobile-menu" id="mobile-menu" type="button">☰</button>
+      </div>
+
+      <header class="admin-topo">
+        <div><h2 id="titulo-secao">Visão geral</h2><p id="descricao-secao">Resumo atual do SGCE.</p></div>
+        <span class="usuario-chip" id="usuario-email">...</span>
+      </header>
+
+      <section class="painel-secao ativa" id="secao-dashboard">
+        <div class="cards-resumo">
+          <article class="resumo-card"><span>Competições</span><strong id="resumo-torneios">0</strong></article>
+          <article class="resumo-card"><span>Equipes</span><strong id="resumo-equipes">0</strong></article>
+          <article class="resumo-card"><span>Atletas</span><strong id="resumo-atletas">0</strong></article>
+          <article class="resumo-card"><span>Pendentes</span><strong id="resumo-pendentes">0</strong></article>
+        </div>
+        <div class="bloco"><div class="bloco-topo"><div><h3>Inscrições recentes</h3><p>Últimos atletas enviados pelo formulário.</p></div></div><div id="recentes"></div></div>
+      </section>
+
+      <section class="painel-secao" id="secao-competicoes">
+        <div class="bloco">
+          <div class="bloco-topo"><div><h3>Nova competição</h3><p>Cadastre um torneio e associe uma modalidade.</p></div></div>
+          <form id="form-torneio" class="grade">
+            <div class="campo"><label for="torneio-nome">Nome *</label><input id="torneio-nome" required></div>
+            <div class="campo"><label for="torneio-local">Local</label><input id="torneio-local"></div>
+            <div class="campo"><label for="torneio-inicio">Data de início</label><input id="torneio-inicio" type="date"></div>
+            <div class="campo"><label for="torneio-fim">Data de fim</label><input id="torneio-fim" type="date"></div>
+            <div class="campo"><label for="torneio-status">Status</label><select id="torneio-status"><option value="planejado">Planejado</option><option value="inscricoes_abertas">Inscrições abertas</option><option value="em_andamento">Em andamento</option><option value="encerrado">Encerrado</option><option value="cancelado">Cancelado</option></select></div>
+            <div class="campo"><label for="torneio-modalidade">Modalidade *</label><select id="torneio-modalidade" required></select></div>
+            <div class="campo campo-full"><button class="btn btn-verde" type="submit">Criar competição</button></div>
+          </form>
+        </div>
+        <div class="bloco"><div class="bloco-topo"><div><h3>Competições cadastradas</h3><p>Altere dados e status dos campeonatos.</p></div></div><div id="lista-torneios"></div></div>
+      </section>
+
+      <section class="painel-secao" id="secao-inscricoes">
+        <div class="bloco">
+          <div class="bloco-topo"><div><h3>Inscrições</h3><p>Aprove, rejeite ou cancele a participação dos atletas.</p></div></div>
+          <div class="filtros"><select id="filtro-status-inscricao"><option value="">Todos os status</option><option value="pendente">Pendentes</option><option value="aprovada">Aprovadas</option><option value="rejeitada">Rejeitadas</option><option value="cancelada">Canceladas</option></select><select id="filtro-torneio-inscricao"><option value="">Todas as competições</option></select></div>
+          <div id="lista-inscricoes"></div>
+        </div>
+      </section>
+
+      <section class="painel-secao" id="secao-equipes">
+        <div class="bloco"><div class="bloco-topo"><div><h3>Equipes cadastradas</h3><p>Consulte e edite nome e categoria.</p></div></div><div id="lista-equipes"></div></div>
+      </section>
+
+      <section class="painel-secao" id="secao-classificacao">
+        <div class="bloco">
+          <div class="bloco-topo"><div><h3>Classificação</h3><p>Atualize pontos, jogos e gols das equipes.</p></div></div>
+          <div class="filtros"><select id="filtro-torneio-classificacao"><option value="">Todas as competições</option></select></div>
+          <div id="lista-classificacao"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="modal-edicao"><div class="modal-card"><div class="modal-topo"><h3 id="modal-titulo">Editar</h3><button class="fechar" id="modal-fechar" type="button">×</button></div><form id="modal-form" class="grade"></form></div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../static/admin.js"></script>
+</body>
+</html>
